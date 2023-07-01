@@ -1,0 +1,72 @@
+package fileInfoExample;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Date;
+import java.util.Scanner;
+
+public class welcomeScreen {
+
+	public static void main(String[] args) { 
+		// Create a File represents a path.
+		System.out.println("**********WELCOME TO THE FILE MANAGER**********");
+		
+		System.out.println("\r\n"
+				+ "__________    _____   ____  __.___________ _________ ___ ___  \r\n"
+				+ "\\______   \\  /  _  \\ |    |/ _|\\_   _____//   _____//   |   \\ \r\n"
+				+ " |       _/ /  /_\\  \\|      <   |    __)_ \\_____  \\/    ~    \\\r\n"
+				+ " |    |   \\/    |    \\    |  \\  |        \\/        \\    Y    /\r\n"
+				+ " |____|_  /\\____|__  /____|__ \\/_______  /_______  /\\___|_  / \r\n"
+				+ "        \\/         \\/        \\/        \\/        \\/       \\/  \r\n"
+				+ "");
+		
+		System.out.println("PLEASE SELECT OPTION BELOW TO PROCEED FURTHER");
+		System.out.println("1. Input 1 for listing the file name in ascending order. \r\n"
+				+ "2. Input 2 for adding file to existing directory list.\r\n"
+				+ "3. Input 3 for deleting file from the existing directory. \r\n"
+				+ "4. Input 4 for searching a user specified file from directory.\r\n");
+		
+		Scanner myObj = new Scanner(System.in);
+		System.out.println("Enter Option: ");
+		String option = myObj.nextLine();
+		System.out.println("Option selected is: " + option);
+
+		
+		
+		
+		        // Driver Method
+  // Provide full path for directory(change
+		            // accordingly)
+		            String maindirpath
+		                = "C:\\Users\\rakes\\OneDrive\\Desktop\\";
+		     
+		            // File object
+		            File maindir = new File(maindirpath);
+		     
+		            if (maindir.exists() && maindir.isDirectory()) {
+		                 
+		                  // array for files and sub-directories
+		                // of directory pointed by maindir
+		                File arr[] = maindir.listFiles();
+		     
+		                System.out.println(
+		                    "**********************************************");
+		                System.out.println(
+		                    "Files from main directory : " + maindir);
+		                System.out.println(
+		                    "**********************************************");
+		     
+		                // Calling recursive method
+		                fileInfoExample.fileInfo.fileSearch(arr, 0, 0);
+		        
+		            }
+		/*fileInfoExample.FileDeleteExample df1 = new fileInfoExample.FileDeleteExample();
+		df1.FileDeleteExample();
+		
+		fileInfoExample.fileSearch df2 = new fileInfoExample.fileSearch();
+		df2.fileSearch();
+		*/
+	}
+
+	}

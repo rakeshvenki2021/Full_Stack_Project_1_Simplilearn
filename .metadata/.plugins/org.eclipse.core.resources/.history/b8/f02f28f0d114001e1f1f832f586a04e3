@@ -1,0 +1,22 @@
+package fileInfoExample;
+
+import java.io.File;
+
+public class FileDeleteExample extends fileInfo {
+try {
+	File f= new ("E:\\music.txt");
+	if(f.delete())
+	{
+		System.out.println(f.getName()+"deleted");
+	}
+	else
+	{
+		System.out.println("failed");
+	}
+}
+catch(Exception e)
+{
+	e.printStackTrace();
+}
+}
+}

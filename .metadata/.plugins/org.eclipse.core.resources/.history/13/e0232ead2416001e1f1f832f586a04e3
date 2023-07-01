@@ -1,0 +1,36 @@
+package fileInfoExample;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Date;
+
+public class welcomeScreen {
+
+	public static void main(String[] args) { 
+		// Create a File represents a path.
+		System.out.println("**********WELCOME TO THE FILE MANAGER**********");
+		
+		System.out.println("\r\n"
+				+ "__________    _____   ____  __.___________ _________ ___ ___  \r\n"
+				+ "\\______   \\  /  _  \\ |    |/ _|\\_   _____//   _____//   |   \\ \r\n"
+				+ " |       _/ /  /_\\  \\|      <   |    __)_ \\_____  \\/    ~    \\\r\n"
+				+ " |    |   \\/    |    \\    |  \\  |        \\/        \\    Y    /\r\n"
+				+ " |____|_  /\\____|__  /____|__ \\/_______  /_______  /\\___|_  / \r\n"
+				+ "        \\/         \\/        \\/        \\/        \\/       \\/  \r\n"
+				+ "");
+		
+		
+		fileInfo test = new fileInfo();
+		        String startDir = ("D:/Programming");
+		        test.listFiles(startDir);
+		
+		/*fileInfoExample.FileDeleteExample df1 = new fileInfoExample.FileDeleteExample();
+		df1.FileDeleteExample();
+		
+		fileInfoExample.fileSearch df2 = new fileInfoExample.fileSearch();
+		df2.fileSearch();
+		*/
+	}
+
+}
